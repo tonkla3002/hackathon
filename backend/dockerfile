@@ -1,0 +1,17 @@
+# Dockerfile
+FROM python:3.9-slim
+
+# สร้าง directory สำหรับแอป
+WORKDIR /app
+
+# คัดลอกไฟล์ requirements.txt และติดตั้ง dependencies
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# คัดลอกโค้ดแอปไปยัง container
+COPY . .
+
+EXPOSE 5000
+# ตั้งค่า entrypoint สำหรับ container
+CMD ["python", "app.py"]

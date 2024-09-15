@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.btn_hover1 {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border: 1.5px solid #7245db;
+    color: #fff;
+    z-index: 1;
+    letter-spacing: 0.8px;
+  }
+  
+  .btn_hover1::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    transition: all 0.3s ease-in;
+    background: linear-gradient(90deg, #7245db, #da8777);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .btn_hover1:hover::before {
+    width: 100%;
+    background: linear-gradient(90deg, #7245db, #da8777);
+  }
+
+  .btn_hover2 {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border: 1.5px solid #7245db;
+    color: #fff;
+    z-index: 1;
+    letter-spacing: 0.8px;
+  }
+  
+  .btn_hover2::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    transition: all 0.3s ease-in;
+    background: linear-gradient(90deg, #7245db, #da8777);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .btn_hover2:hover::before {
+    height: 100%;;
+    background: linear-gradient(90deg, #7245db, #da8777);
+  }
