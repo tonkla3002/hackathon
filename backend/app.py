@@ -5,6 +5,20 @@ import openpyxl
 from openpyxl.styles import PatternFill, Border, Side, Alignment
 import openai
 
+from dotenv import load_dotenv
+import os
+import openai
+
+# โหลดไฟล์ .env
+load_dotenv()
+
+# ดึงค่า OPENAI_API_KEY จาก .env
+openai.api_key = os.getenv('OPENAI_API_KEY')
+
+# ใช้งาน openai API ตามปกติ
+
+
+
 app = Flask(__name__)
 
 # ตั้งค่า OpenAI API key ของคุณ
